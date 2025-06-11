@@ -1,17 +1,17 @@
 # 📦 json-server-api-mapist
 
 Mock REST API using `json-server` for development and testing purposes.
-Deployed on [Railway](https://railway.app/) for public use.
+Deployed on [Render](https://render.com/) for public use.
 
 ---
 
 ## 🚀 Live API
 
-👉 **Base URL**:
-`https://json-server-api-mapist-production.up.railway.app`
+👉 **Base URL**:  
+`https://json-server-api-mapist.onrender.com`
 
-> Example endpoint:
-> `GET /cities` → `https://json-server-api-mapist-production.up.railway.app/cities`
+> Example endpoint:  
+> `GET /cities` → `https://json-server-api-mapist.onrender.com/cities`
 
 ---
 
@@ -21,6 +21,7 @@ Deployed on [Railway](https://railway.app/) for public use.
 .
 ├── db.json               # Mock database
 ├── package.json          # Project metadata and start script
+├── public/               # (Required by json-server v1+) Empty folder
 ```
 
 ---
@@ -100,20 +101,22 @@ git commit -m "Initial commit"
 git push -u origin main
 ```
 
-### 5. Deploy to Railway
+### 5. Deploy on Render
 
-- Go to [Railway](https://railway.app/)
-- Click **New Project** → **Deploy from GitHub repo**
+- Go to [Render](https://render.com/)
+- Click **New Web Service** → **Deploy from GitHub**
 - Select your repo
+- Use `npm install` as Build command
 - Use `npm start` as the Start Command
-- From Settings > Networking, click **"Generate Public Domain"**
+- Environment: Node
+- Click **Create Web Service**
 
 ---
 
 ## 🧪 Example Usage in Code
 
 ```js
-fetch("https://json-server-api-mapist-production.up.railway.app/cities")
+fetch("https://json-server-api-mapist.onrender.com/cities")
   .then((res) => res.json())
   .then((data) => console.log(data))
   .catch((err) => console.error("Error:", err));
@@ -125,4 +128,4 @@ fetch("https://json-server-api-mapist-production.up.railway.app/cities")
 
 - [Node.js](https://nodejs.org/)
 - [json-server](https://github.com/typicode/json-server)
-- [Railway](https://railway.app/) – Hosting
+- [Render](https://render.com/) – Hosting
