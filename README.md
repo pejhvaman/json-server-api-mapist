@@ -62,7 +62,7 @@ You can modify the `db.json` to create other resources (like `users`, `posts`, e
 
 ---
 
-## ☁️ Deployment Guide (Railway)
+## ☁️ Deployment Guide
 
 ### 1. Setup Project
 
